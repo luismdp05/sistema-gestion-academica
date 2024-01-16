@@ -1,0 +1,44 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block links %}
+   <link rel="stylesheet" href="{% static 'css/insertar.css' %}">
+{% endblock %}
+
+{% block content %}
+   <header class="flex-row justify-content-start p-3 card m-5">
+      <a class="nav-link" href="{% url 'estudiantes' %}" title="back"><svg
+         xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+         class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 
+            0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 
+            .708.708L5.707 7.5H11.5z" />
+      </svg></a>
+      <form action="{% url 'eliminar_estudiante' estudiante.ci %}" method="POST" class="me-auto ms-4">
+         {% csrf_token %}
+         <button class="btn btn-outline-danger">
+            Delete
+         </button>
+      </form>
+      <h2 class="me-auto text-success">Modificar Estudiante {{estudiante.nombre}} {{estudiante.apellidos}}</h2>
+   </header>
+   <div class="card m-5">
+      <form action="" method="POST" class="form-control form-row d-flex flex-column">
+         {% csrf_token %}
+         <div class="card-body">
+            <fieldset><label class="form-label" for="">Nombre:</label>{{ form.nombre }}</fieldset>
+            <fieldset><label for="">Apellidos:</label>{{ form.apellidos }}</fieldset>
+            <fieldset><label for="">Sexo:</label>{{ form.sexo }}</fieldset>
+            <fieldset><label for="">CI:</label>{{ form.ci }}</fieldset>
+            <fieldset><label for="">Dirección:</label>{{ form.dir }}</fieldset>
+            <fieldset><label for="">Teléfono:</label>{{ form.tel }}</fieldset>
+            <fieldset><label for="">Grupo:</label>{{ form.grupo }}</fieldset>
+            <fieldset><label for="">Año:</label>{{ form.anno }}</fieldset>
+         </div>
+         <div class="card-footer">
+            <button class="btn btn-outline-primary">Modificar</button>
+            <a href="{% url 'estudiantes' %}" class="btn btn-outline-danger">Cancelar</a>
+         </div>
+      </form>
+   </div>
+{% endblock %}

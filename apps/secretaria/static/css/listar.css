@@ -1,0 +1,102 @@
+#formStudents > ul:nth-child(1) {
+   border-bottom: 2px solid rgba(48, 52, 64, .2);
+}
+
+#formStudents > ul:nth-child(2) {
+   padding-top: 0;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(1), #formStudents > ul:nth-child(2) > li > label:nth-child(1) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 6.1rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(2), #formStudents > ul:nth-child(2) > li > label:nth-child(2) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 9rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(3), #formStudents > ul:nth-child(2) > li > label:nth-child(3) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 3.3rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(4), #formStudents > ul:nth-child(2) > li > label:nth-child(4) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 7rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(5), #formStudents > ul:nth-child(2) > li > label:nth-child(5) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 9rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(6), #formStudents > ul:nth-child(2) > li > label:nth-child(6) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 5.4rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(7), #formStudents > ul:nth-child(2) > li > label:nth-child(7) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 4rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(8), #formStudents > ul:nth-child(2) > li > label:nth-child(8) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 3rem;
+}
+
+#formStudents > ul:nth-child(1) > li:nth-child(9), #formStudents > ul:nth-child(2) > li > label:nth-child(9) {
+   padding: 0;
+   padding-right: 1rem;
+   width: 8rem;
+}
+
+#formStudents > ul:nth-child(1) > li {
+   font-weight: bold;
+}
+
+#formStudents > ul:nth-child(2) > li {
+   display: flex;
+   border-bottom: 2px solid rgba(48, 52, 64, .2);
+   align-items: center;
+}
+
+#formStudents > ul > input {
+   margin-left: auto;
+}
+
+#mainRow > main > header > div {
+   align-self: center;
+}
+
+#mainRow > main > header > div > a {
+   margin-right: .5rem;
+}
+
+#mainRow > main > header > a {
+   color: rgba(48, 52, 64, .2);
+   align-self: center;
+}
+
+#mainRow > main > header > a:hover {
+   color: #0d6efd;
+   cursor: pointer;
+}
+
+.disabled {
+   cursor: not-allowed;
+   pointer-events: none;
+}
+
+#formStudents > ul > li > a {
+   margin: .8rem 0;
+}

@@ -1,0 +1,47 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'JetBrains Mono', 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "terminal.integrated.autoReplies":  {
+      
+    },
+    "terminal.integrated.defaultProfile.osx": "",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "GitBash": {
+            "path": "C:\\Soft\\Git\\bin\\bash.exe"
+        },
+        "Windows PowerShell": {
+            "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "GitBash",
+    "workbench.startupEditor": "none",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorStyle": "line-thin",
+    "editor.wordWrap": "on",
+    "terminal.explorerKind": "external",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editorAssociations": {
+        "*.pyc": "default"
+    },
+    "docker.containers.label": "ContainerId",
+    "gitlens.views.commitDetails.files.layout": "tree",
+    "oneDarkPro.bold": true,
+    "workbench.colorTheme": "One Dark Pro"
+    
+}

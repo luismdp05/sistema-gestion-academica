@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles-login.css' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/school_48px.png' %}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="p-0 m-0">
+                <nav class="navbar col-12">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex" href="index.html">
+                                <img id="logo" src="{% static 'img/school_96px.png' %}" alt="">
+                                <h1 id="logoText" class="m-0">SGA</h1>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+							<a href="https://g.co/kgs/YUZ8Hy" class="nav-link"><h2>Rogelio Niz Serra</h2></a>
+						</li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    
+        <div class="row mt-5">
+            <div class="col">
+                <form action="/" method="POST" class="form box d-flex flex-column align-items-center m-auto mt-5" id="form">
+                    {% csrf_token %}
+                    <div id="group_user" class="form_group justify-content-between align-items-center mb-2">
+                        <label for="username" class="form_label me-2 fw-bold p-2 user">User:</label>
+                        <div class="form_group_input d-inline">
+                            <input class="form_input w-100 bg-white" type="text" id="user" name="username" 
+                                placeholder="usuario">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" 
+                                class="form_validation_state bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 
+                                8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 
+                                8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" 
+                                class="form_validation_state bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 
+                                    9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 
+                                    1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                            </svg>
+                        </div>
+                        <p class="form_input_error mb-0">
+                            The username must be from 4 to 16 digits and can only contain numbers, letters and hyphen.</p>
+                    </div>
+                    <div id="group_pass" class="justify-content-between align-items-center">
+                        <label for="password" class="form_label me-2 fw-bold p-2">Password:</label>
+                        <div class="form_group_input d-inline">
+                            <input class="form_input w-100 bg-white" type="password" id="pass" 
+                                name="password" placeholder="********">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" 
+                                class="form_validation_state bi bi-x-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 
+                                    2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 
+                                    0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" 
+                                class="form_validation_state bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 
+                                    9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 
+                                    1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                            </svg>
+                        </div>
+                        <p class="form_input_error mb-0">The password must be between 4 and 12 digits.</p>
+                    </div>
+                    {{error}}
+                    <button class="form_btn btn btn-success fw-bold mt-4" type="submit">Iniciar sesión</button> 
+                </form>
+            </div> 
+        </div>
+    </div>
+    
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- <script src="./js/jquery-3.6.1.min.js"></script> -->
+    <!-- <script src="./js/index-jquery.js"></script> -->
+    <script defer src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

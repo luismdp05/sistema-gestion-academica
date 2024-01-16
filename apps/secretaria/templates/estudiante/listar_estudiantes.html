@@ -1,0 +1,66 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block links %}
+   <link rel="stylesheet" href="{% static 'css/listar.css' %}">
+{% endblock %}
+
+{% block content %}
+
+      <header class="flex-row justify-content-start p-3 card  m-4">
+         <a class="nav-link" href="{% url 'index' %}" title="back"><svg
+               xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+               class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+               <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 
+                  0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 
+                  .708.708L5.707 7.5H11.5z" />
+            </svg></a>
+         <div class="ms-4">
+            <a href="{% url 'insertar_estudiante' %}" class="btn btn-outline-primary">Insertar</a>
+         </div>
+      </header>
+      <section id="formStudents" class="card m-4">
+         <ul class="nav m-auto card-header">
+            <li>Nombre</li>
+            <li>Apellidos</li>
+            <li>Sexo</li>
+            <li>CI</li>
+            <li>Dirección</li>
+            <li>Teléfono</li>
+            <li>Grupo</li>
+            <li>Año</li>
+            <li>Opciones</li>
+            
+         </ul>
+         <ul class="nav flex-column m-auto card-body">
+
+            {% for estudiante in estudiantes %}
+
+               <li> 
+                  <label> {{ estudiante.nombre }} </label> 
+                  <label> {{ estudiante.apellidos }} </label>
+                  <label> {{ estudiante.sexo }} </label> 
+                  <label> {{ estudiante.ci }} </label> 
+                  <label> {{ estudiante.dir }} </label> 
+                  <label> {{ estudiante.tel }} </label> 
+                  <label> {{ estudiante.grupo }} </label> 
+                  <label> {{ estudiante.anno }} </label> 
+                  <a href="{% url 'modificar_estudiante' estudiante.ci %}" class="btn btn-outline-warning ms-1">Edit</a>
+                  <form action="{% url 'eliminar_estudiante' estudiante.ci %}" method="POST" class="ms-1">
+                     {% csrf_token %}
+                     <button class="btn btn-outline-danger">Delete</button>
+                  </form>
+               </li>
+
+            {% endfor %}
+
+         </ul>
+      </section>
+
+{% endblock %}
+
+{% block script %}
+
+
+
+{% endblock %}

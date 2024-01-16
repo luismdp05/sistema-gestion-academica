@@ -1,0 +1,151 @@
+body {
+    /*background: #F5EFE6;*/
+    background-image: url(../img/loginFont.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    background: rgba(18, 29, 39, 0.3);
+}
+
+.box {
+    margin-top: .9rem;
+    padding: 1.2rem;
+    background: rgba(87, 111, 114, .5);
+    width: 320px;
+    border-radius: 5px;
+}
+
+.form_label {
+    color: white;
+    cursor: pointer;
+}
+
+.form_group_input {
+    position: relative;
+}
+
+.form_input {
+    border: 3px solid transparent;
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    transition: .3s ease all;
+}
+
+.form_input:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, .4);
+}
+
+.form_input_error {
+    color: #dc3545;
+    font-size: .8rem;
+    display: none;
+}
+
+.form_input_error_active {
+    display: block;
+}
+
+.form_validation_state {
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    z-index: 100;
+    opacity: 0;
+}
+
+.form_message {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    border-radius: 3px;
+    display: none;
+}
+
+.form_message_active {
+    display: block;
+}
+
+.form_btn {
+    height: 45px;
+}
+
+.form_message_succes {
+    font-size: 14px;
+    display: none;
+}
+
+.form_message_succes_active {
+    display: block;
+}
+
+.form_group_correct .form_validation_state {
+    color: #198754;
+    opacity: 1;
+}
+
+.form_group_correct .bi-check-circle-fill {
+    display: block;
+}
+
+.form_group_correct .bi-x-circle-fill {
+    display: none;
+}
+
+.form_group_incorrect .bi-check-circle-fill {
+    display: none;
+}
+
+.form_group_incorrect .bi-x-circle-fill {
+    display: block;
+}
+
+.form_group_incorrect .form_label {
+    color: #dc3545;
+}
+
+.form_group_incorrect .form_validation_state {
+    color: #dc3545;
+    opacity: 1;
+}
+
+.form_group_incorrect .form_input {
+    border: 3px solid #dc3545;
+}
+
+.logo_school{
+    width: 50px;
+    right: 50px;
+}
+
+#logo {
+    width: 40px;
+    height: 100%;
+}
+
+#logoText {
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+}
+
+#logoText:hover, body > div > div:nth-child(1) > header > nav > ul > li:nth-child(2) > a > h2:hover {
+    transition: .30s;
+    color: #363736;
+}
+
+.navbar {
+    background: #576F72 !important;
+}
+
+body > div > div:nth-child(1) > header > nav > ul > li:nth-child(2) > a > h2{
+    color: white;
+    margin-left: 23rem;
+}
+
